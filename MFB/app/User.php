@@ -14,6 +14,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    public function meals()
+    {
+      return $this->hasMany(Meal::class);
+    }
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
